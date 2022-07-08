@@ -17,7 +17,7 @@ function App() {
       API.getCharacters(page,textSearch).then(data => setPersonajes(data))
     }, [page,textSearch])
   
-    const avanzarPagina = (nro) => {
+    const nextPage = (nro) => {
       if (!personajes.info.prev && page + nro <= 0) return
       if (!personajes.info.next && page + nro >= personajes.info.pages) return
   
@@ -62,7 +62,7 @@ function App() {
       <div className='pagination'>
         <Pagination 
         pagina={page} 
-        modificaBtn={avanzarPagina}
+        modificaBtn={nextPage}
         />   
       </div> 
     </div>
