@@ -7,7 +7,6 @@ import { Error } from './components/Error'
 import './App.css';
 
 function App() {
-  /* Estos estados manejan los 20 personajes por separado */
   const [personajes, setPersonajes] = useState({}) //
   const [page, setPage] = useState(1)
  
@@ -32,7 +31,6 @@ function App() {
 
   const onSearchSubmit = (event) => {
     if (event.key !== 'Enter') return
-    /* Si entra, seteo nuevamente el page, creo que falta setear personajes! cuando hago enter */
     setPage(1)
     setTextSearch(inputSearch.current.value)
     inputSearch.current.value = ""
