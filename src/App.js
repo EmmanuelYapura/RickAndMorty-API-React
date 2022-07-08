@@ -7,13 +7,13 @@ import { Error } from './components/Error'
 import './App.css';
 
 function App() {
-  const [personajes, setPersonajes] = useState({}) //
+  const [personajes, setPersonajes] = useState({}) 
   const [page, setPage] = useState(1)
  
   const [textSearch, setTextSearch] = useState("")
 	const inputSearch = useRef(null)
  
-    useEffect(() => {//
+    useEffect(() => {
       API.getCharacters(page,textSearch).then(data => setPersonajes(data))
     }, [page,textSearch])
   
