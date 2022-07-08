@@ -9,20 +9,20 @@ import './App.css';
 function App() {
   /* Estos estados manejan los 20 personajes por separado */
   const [personajes, setPersonajes] = useState({}) //
-  const [nroPagina, setNroPagina] = useState(1)
+  const [page, setPage] = useState(1)
  
   const [textSearch, setTextSearch] = useState("")
 	const inputSearch = useRef(null)
  
     useEffect(() => {//
-      API.getCharacters(nroPagina,textSearch).then(data => setPersonajes(data))
-    }, [nroPagina,textSearch])
+      API.getCharacters(page,textSearch).then(data => setPersonajes(data))
+    }, [page,textSearch])
   
     const avanzarPagina = (nro) => {
-      if (!personajes.info.prev && nroPagina + nro <= 0) return
-      if (!personajes.info.next && nroPagina + nro >= personajes.info.pages) return
+      if (!personajes.info.prev && page + nro <= 0) return
+      if (!personajes.info.next && page + nro >= personajes.info.pages) return
   
-      setNroPagina(nroPagina + nro)
+      setPage(page + nro)
     }
 
   const onChangeText = (event) => {
@@ -32,14 +32,14 @@ function App() {
 
   const onSearchSubmit = (event) => {
     if (event.key !== 'Enter') return
-    /* Si entra, seteo nuevamente el nroPagina, creo que falta setear personajes! cuando hago enter */
-    setNroPagina(1)
+    /* Si entra, seteo nuevamente el page, creo que falta setear personajes! cuando hago enter */
+    setPage(1)
     setTextSearch(inputSearch.current.value)
     inputSearch.current.value = ""
   }
 
   const resetCharacters = () => {
-    setNroPagina(1)
+    setPage(1)
     setTextSearch('')
   }
 
@@ -63,7 +63,7 @@ function App() {
       </div>
       <div className='pagination'>
         <Pagination 
-        pagina={nroPagina} 
+        pagina={page} 
         modificaBtn={avanzarPagina}
         />   
       </div> 
