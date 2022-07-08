@@ -42,7 +42,7 @@ También puede ver errores en la consola.*
 
 ## Construido con
 
-1. [Rick-and-Mortyy](https://rickandmortyapi.com/) - API de RickAndMorty
+1. [Rick-and-Morty](https://rickandmortyapi.com/) - API de RickAndMorty
 2. NPM- sistema de gestión de paquetes
 3. React JS
 4. NodeJS
