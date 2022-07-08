@@ -7,22 +7,22 @@ import { Error } from './components/Error'
 import './App.css';
 
 function App() {
-  const [personajes, setPersonajes] = useState({}) 
+  const [personajes, setPersonajes] = useState({})
   const [page, setPage] = useState(1)
- 
+
   const [textSearch, setTextSearch] = useState("")
-	const inputSearch = useRef(null)
- 
-    useEffect(() => {
-      API.getCharacters(page,textSearch).then(data => setPersonajes(data))
-    }, [page,textSearch])
-  
-    const nextPage = (nro) => {
-      if (!personajes.info.prev && page + nro <= 0) return
-      if (!personajes.info.next && page + nro >= personajes.info.pages) return
-  
-      setPage(page + nro)
-    }
+  const inputSearch = useRef(null)
+
+  useEffect(() => {
+    API.getCharacters(page, textSearch).then(data => setPersonajes(data))
+  }, [page, textSearch])
+
+  const nextPage = (number) => {
+    if (!personajes.info.prev && page + number <= 0) return
+    if (!personajes.info.next && page + number >= personajes.info.pages) return
+
+    setPage(page + number)
+  }
 
   const onChangeText = (event) => {
     let text = inputSearch.current.value
@@ -44,27 +44,27 @@ function App() {
   return (
     <div className="App">
       <div className='navbar'>
-        <Navbar 
-        referencia={inputSearch} 
-        cambioInput={onChangeText} 
-        envioTexto={onSearchSubmit}
-        buttonRest={resetCharacters}
+        <Navbar
+          reference={inputSearch}
+          changeInput={onChangeText}
+          sendText={onSearchSubmit}
+          buttonRest={resetCharacters}
         />
       </div>
-     <div className='cards'>
+      <div className='cards'>
         {
-          personajes.error? 
-          <Error />
-          :
-          <CardList personajes={personajes?.results}/>
+          personajes.error ?
+            <Error />
+            :
+            <CardList characters={personajes?.results} />
         }
       </div>
       <div className='pagination'>
-        <Pagination 
-        pagina={page} 
-        modificaBtn={nextPage}
-        />   
-      </div> 
+        <Pagination
+          numberPage={page}
+          changeButton={nextPage}
+        />
+      </div>
     </div>
   );
 }

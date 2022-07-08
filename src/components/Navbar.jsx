@@ -1,14 +1,14 @@
 import './Navbar.css'
 import { Button } from './Button'
 
-export function Navbar({ referencia, cambioInput, envioTexto, buttonRest}) {
+export function Navbar({ reference, changeInput, sendText, buttonRest}) {
 
 
 	return (
 		<div className='container-navbar'>
 			<header className="header-navbar"> Rick and Morty</header>
 			<nav className='nav-navbar'>
-				{<input className="input-navbar" ref={referencia} onKeyDown={envioTexto} onChange={cambioInput} type="text" placeholder=' Busca un personaje' />
+				{<input className="input-navbar" ref={reference} onKeyDown={sendText} onChange={changeInput} type="text" placeholder=' Busca un personaje' />
 				}
 				<Button reset={buttonRest}/>
 			</nav>

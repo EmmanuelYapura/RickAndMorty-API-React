@@ -1,14 +1,14 @@
 import { Card } from './Card'
 import './CardList.css'
 
-export function CardList({ personajes }) {
+export function CardList({ characters }) {
 
 
 	return (
 		<div className='container-list'>
 			{
-				personajes?.map(personaje => (
-					<Card key={personaje.id} character={personaje} />
+				characters?.map(character => (
+					<Card key={character.id} character={character} />
 				))
 			}
 		</div>
