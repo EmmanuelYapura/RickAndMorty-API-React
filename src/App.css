@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.navbar, .pagination{
+    background-color: #6E85B7;
+}
+
+.cards{
+    background-color: #F2D7D9;
+    min-height: 76vh;
+}
+

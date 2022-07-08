@@ -1,0 +1,93 @@
+.container-card{
+    max-width: 1400px;
+    border: 1px double white;
+    background-color: #3F4E4F;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 36px;
+    color: white;
+}
+
+.image{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.stats{ 
+    display: none;
+}
+
+/* Se podria pensar un cambio en 768! */
+
+@media (min-width: 992px){
+    .container-card{
+        border: 1px double white;
+        margin: 10px;
+    }
+    
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 36px;
+        color: white;
+    }
+    
+    .image{
+        width: 100%;
+        height: auto;
+    }
+    
+    .stats{ 
+        height: 73px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        color: #F2D7D9;
+        font-weight: bold;
+        font-family: Roboto;
+    }
+
+    .text-center{
+        align-self: center;
+    }
+}
+
+@media (min-width: 1315px){
+    .container-card{
+        border: 1px double white;
+        margin: 10px;
+    }
+    
+    .title{
+        align-items: center;
+        justify-content: space-evenly;
+        text-transform: uppercase;
+        padding-left: 10px;
+        height: 45px;
+    }
+    
+    .image{
+        width: 150px;
+    }
+
+    .container-stats{
+        display: flex;
+    }
+    
+    .stats{ 
+        width: 140px;
+        height: 150px;
+        margin-left: 10px;
+        justify-content: space-around;
+    }
+
+}
