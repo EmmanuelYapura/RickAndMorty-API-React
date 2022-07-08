@@ -5,7 +5,7 @@
 
 ## Instrucciones
 
-*Al cargar el proyecto los pesonajes se muestran segun la pagina en la que estemos ubicados, cuenta con botones para retroceder y avanzar, y un boton de reinicio para mostrar nuevamente todos los personajes en caso de tener un error. Luego hay un buscador de personajes el cual retorna todos aquellos que tengan el texto ingresado luego de pulsar enter. *
+*Al cargar el proyecto los pesonajes se muestran segun la pagina en la que estemos ubicados, cuenta con botones para retroceder y avanzar, y un boton de reinicio para mostrar nuevamente todos los personajes en caso de tener un error. Luego hay un buscador de personajes el cual retorna todos aquellos que tengan el texto ingresado luego de pulsar enter.*
 
 ## Pre-requisitos
 
