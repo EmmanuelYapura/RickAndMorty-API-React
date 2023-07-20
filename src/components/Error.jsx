@@ -1,7 +1,6 @@
 import './Error.css'
 
 export function Error() {
-
     return(
         <div className='container-error'>
             Hubo un error en la busqueda, a continuacion se mencionan los posibles errores:
@@ -13,5 +12,5 @@ export function Error() {
            <br />
            Puede recargar los personajes nuevamente tocando el boton gris. 
         </div>
-    )
-}
+    );
+};

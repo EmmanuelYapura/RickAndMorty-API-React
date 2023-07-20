@@ -1,24 +1,21 @@
 import './Card.css'
 
-
-export function Card( { character }) {
-
+export function Card({ caracter }) {
 	return (
 		<div className='container-card'>
 
 			<header className='title'>
-			<p>{ character.name }</p>
-			<p>{ character.status }</p>
+				<p>{caracter.name}</p>
+				<p>{caracter.status}</p>
 			</header>
 			<div className='container-stats'>
-
-			<img className='image' src={ character.image } alt="character" />
-			<div className="stats">
-				<p className='text-center'>{ character.species } | { character.gender }</p>
-				<p className='text-center'>{ character.origin.name }</p>
-				<p>{ character.created }</p>
-			</div>
+				<img className='image' src={caracter.image} alt="caracter" />
+				<div className="stats">
+					<p className='text-center'>{caracter.species} | {caracter.gender}</p>
+					<p className='text-center'>{caracter.origin.name}</p>
+					<p>{caracter.created}</p>
+				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};

@@ -1,10 +1,9 @@
 import './Button.css'
 
-export function Button({ reset}){
-
+export function Button({ resetear }){
     return (
         <div>
-            <button onClick={reset} className='button-reset'></button>
+            <button onClick={ resetear } className='button-reset'></button>
         </div>
-    )
-}
+    );
+};
